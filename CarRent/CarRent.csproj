@@ -7,12 +7,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Models\" />
+      <Folder Include="Views\Models\" />
       <Folder Include="wwwroot\" />
     </ItemGroup>
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="wwwroot\js\site.js" />
+      <_ContentIncludedByDefault Remove="Views\Feature\index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Team\index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Testimontal\index.cshtml" />
     </ItemGroup>
 
 </Project>

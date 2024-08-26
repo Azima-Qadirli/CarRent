@@ -28,3 +28,4 @@ C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\obj\Debug\net8.0\refint\Ca
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\obj\Debug\net8.0\CarRent.pdb
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\obj\Debug\net8.0\CarRent.genruntimeconfig.cache
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\obj\Debug\net8.0\ref\CarRent.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\obj\Debug\net8.0\CarRent.sourcelink.json
