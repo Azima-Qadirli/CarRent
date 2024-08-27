@@ -8,11 +8,12 @@ public interface IRepository<T>where T : BaseEntity
     Task AddRangeAsync(IEnumerable<T> entites);
     
     bool Update(T entity);
+    void UpdateRange(IEnumerable<T> entites);
     bool Remove(T entity);
-    Task RemoveRangeAsync(IEnumerable<T> entites);
+    void RemoveRange(IEnumerable<T> entites);
     Task<bool> RemoveAsync(int id);
-    Task<T> Get(int id);
-    Task<IQueryable<T>> GetAllAsync();
+    Task<T> GetAsync(int id);
+    IQueryable<T>GetAll();
     int Save();
     Task<int> SaveAsync();
 

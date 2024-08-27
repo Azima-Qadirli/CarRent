@@ -1,4 +1,5 @@
 using CarRent.Context;
+using CarRent.Exceptions;
 using CarRent.Repositories.Interfaces;
 using CarRent.Views.Models.BaseEntities;
 using Microsoft.EntityFrameworkCore;
@@ -27,41 +28,45 @@ public class Repository<T>:IRepository<T> where T :BaseEntity
 
     public bool Update(T entity)
     {
-        throw new NotImplementedException();
+        EntityEntry entityEntry = _dbSet.Update(entity);
+        return entityEntry.State == EntityState.Modified;
     }
+
+    public void UpdateRange(IEnumerable<T> entites)
+        => _dbSet.UpdateRange(entites);
 
     public bool Remove(T entity)
     {
-        throw new NotImplementedException();
+        EntityEntry entityEntry = _dbSet.Remove(entity);
+        return entityEntry.State == EntityState.Deleted;
     }
 
-    public Task RemoveRangeAsync(IEnumerable<T> entites)
+    public void RemoveRange(IEnumerable<T> entites)
+        => _dbSet.RemoveRange(entites);
+
+    public async Task<bool> RemoveAsync(int id)
     {
-        throw new NotImplementedException();
+        var entity = await GetAsync(id);
+        EntityEntry entityEntry= _dbSet.Remove(entity);
+        return entityEntry.State == EntityState.Deleted;
     }
 
-    public Task<bool> RemoveAsync(int id)
+    public async Task<T> GetAsync(int id)
     {
-        throw new NotImplementedException();
+        var entity= await _dbSet.FirstOrDefaultAsync(x => x.Id == id);
+        if (entity is null)
+            throw new EntityNotFoundException();
+        return entity;
     }
 
-    public Task<T> Get(int id)
+    public IQueryable<T>GetAll()
     {
-        throw new NotImplementedException();
-    }
-
-    public Task<IQueryable<T>> GetAllAsync()
-    {
-        throw new NotImplementedException();
+        return _dbSet;
     }
 
     public int Save()
-    {
-        throw new NotImplementedException();
-    }
+        => _context.SaveChanges();
 
-    public Task<int> SaveAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<int> SaveAsync()
+        => await _context.SaveChangesAsync();
 }

@@ -1,6 +1,6 @@
 namespace CarRent.Views.Models.BaseEntities;
 
-public class BaseEntity
+public abstract class BaseEntity
 {
     public int Id { get; set; }
     public DateTime CreateAt { get; set; }
