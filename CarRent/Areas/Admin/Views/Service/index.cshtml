@@ -1,0 +1,37 @@
+@model List<CarRent.Views.Models.Service>
+<div class="container-fluid p-3">
+    <table class="table fs-5">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Icon</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var service in Model)
+        {
+        <tr>
+            <th scope="row">@service.Id</th>
+            <td>@service.Title</td>
+            <td>@service.Description</td>
+            <td><i class="fas @service.Icon"></i></td>
+            <td>
+                <a asp-action="update" asp-controller="service" asp-route-id="@service.Id">
+                    <i class="fas fa-pen-to-square"></i>
+                </a>
+            </td>
+            <td>
+                <a onclick="if(!confirm('Are you sure?')){ return false; }" asp-action="remove" asp-controller="service" asp-route-id="@service.Id">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        }
+        </tbody>
+    </table>
+    <a class="btn btn-primary w-100" asp-controller="Service" asp-action="Add">Add Service</a>
+</div>

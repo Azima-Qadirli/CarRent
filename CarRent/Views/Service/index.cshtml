@@ -1,3 +1,7 @@
+@model List<CarRent.Views.Models.Service>
+@{
+    double second = 0.1;
+}
 <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
@@ -20,60 +24,23 @@
                     </p>
                 </div>
                 <div class="row g-4">
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item p-4">
-                            <div class="service-icon mb-4">
-                                <i class="fa fa-phone-alt fa-2x"></i>
+                    @foreach (var service in Model)
+                    {
+                        var secondString = (second + "s").Replace(",", ".");
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="@secondString">
+                            <div class="service-item p-4">
+                                <div class="service-icon mb-4">
+                                    <i class="fa @service.Icon fa-2x"></i>
+                                </div>
+                                <h5 class="mb-3">@service.Title</h5>
+                                <p class="mb-0">@service.Description</p>
                             </div>
-                            <h5 class="mb-3">Phone Reservation</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item p-4">
-                            <div class="service-icon mb-4">
-                                <i class="fa fa-money-bill-alt fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Special Rates</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item p-4">
-                            <div class="service-icon mb-4">
-                                <i class="fa fa-road fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">One Way Rental</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item p-4">
-                            <div class="service-icon mb-4">
-                                <i class="fa fa-umbrella fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Life Insurance</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item p-4">
-                            <div class="service-icon mb-4">
-                                <i class="fa fa-building fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">City to City</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item p-4">
-                            <div class="service-icon mb-4">
-                                <i class="fa fa-car-alt fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Free Rides</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                        </div>
-                    </div>
+                        if (second < 0.5)
+                            second += 0.2;
+                        else
+                            second = 0.1;
+                    }
                 </div>
             </div>
         </div>

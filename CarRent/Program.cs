@@ -1,4 +1,6 @@
 using CarRent.Context;
+using CarRent.Repositories;
+using CarRent.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,7 @@ builder.Services.AddDbContext<CarRentDbContext>(opt =>
 });
 
 
+builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 
 
 
@@ -30,11 +33,26 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoint =>
+{
+    endpoint.MapAreaControllerRoute(
+        name: "admin",
+        pattern: "admin/{controller=Home}/{action=Index}/{id?}",
+        areaName: "admin"
+    );
+
+    endpoint.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
+});
+
+
+
+// app.MapControllerRoute(
+//     name: "default",
+//     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
