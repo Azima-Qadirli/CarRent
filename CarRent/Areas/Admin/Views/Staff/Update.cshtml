@@ -1,58 +1,29 @@
-@model CarRent.Views.Models.Service
+@model CarRent.Views.Models.Staff
 <div class="container-fluid p-3 fs-5">
     <div class="row">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div class="mb-3">
-                <label asp-for="Title" class="form-label">Title</label>
-                <input type="text" class="form-control border-danger" asp-for="Title">
-                <span class="text-danger fs-6" asp-validation-for="Title"></span>
+                <label asp-for="FirstName" class="form-label">FirstName</label>
+                <input type="text" class="form-control border-danger" asp-for="FirstName">
+                <span class="text-danger fs-6" asp-validation-for="FirstName"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="Description" class="form-label">Description</label>
-                <textarea class="form-control border-danger" asp-for="Description" rows="3"></textarea>
-                <span class="text-danger fs-6" asp-validation-for="Description"></span>
+                <label asp-for="LastName" class="form-label">LastName</label>
+                <input type="text" class="form-control border-danger" asp-for="LastName">
+                <span class="text-danger fs-6" asp-validation-for="LastName"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="Icon" class="form-label">Icon</label>
-                <div class="form-check">
-                    <input class="form-check-input border-danger" value="fa-phone-alt" type="radio" name="Icon" asp-for="Icon">
-                    <label class="form-check-label" asp-for="Icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input border-danger" value="fa-money-bill-alt" type="radio" name="Icon" asp-for="Icon" >
-                    <label class="form-check-label" asp-for="Icon">
-                        <i class="fas fa-money-bill-alt"></i>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input border-danger" value="fa-road" type="radio" name="Icon" asp-for="Icon">
-                    <label class="form-check-label" asp-for="Icon">
-                        <i class="fas fa-road"></i>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input border-danger" value="fa-umbrella" type="radio" name="Icon" asp-for="Icon">
-                    <label class="form-check-label" asp-for="Icon">
-                        <i class="fas fa-umbrella"></i>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input border-danger" value="fa-building" type="radio" name="Icon" asp-for="Icon">
-                    <label class="form-check-label" asp-for="Icon">
-                        <i class="fas fa-building"></i>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input border-danger" value="fa-car-alt" type="radio" name="Icon" asp-for="Icon">
-                    <label class="form-check-label" asp-for="Icon">
-                        <i class="fas fa-car-alt"></i>
-                    </label>
-                </div>
-                <span class="text-danger fs-6" asp-validation-for="Icon"></span>
+                <label asp-for="Profession" class="form-label">Profession</label>
+                <input type="text" class="form-control border-danger" asp-for="Profession">
+                <span class="text-danger fs-6" asp-validation-for="Profession"></span>
             </div>
-            <button class="btn btn-primary w-100 mt-3" type="submit">Update Service</button>
+            <div class="mb-3">
+                <label asp-for="File" class="form-label">Image</label>
+                <input type="file" class="form-control border-danger" asp-for="File">
+                <span class="text-danger fs-6" asp-validation-for="File"></span>
+            </div>
+
+            <button class="btn btn-primary w-100 mt-3" type="submit">Update Staff </button>
         </form>
     </div>
 </div>

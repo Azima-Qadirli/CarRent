@@ -19,7 +19,7 @@ public class HomeController : Controller
 
     public async  Task<ActionResult> Index()
     {
-       var staves= await _repository.GetAll().ToListAsync();
+       var staves= await _repository.GetAll().Take(4).ToListAsync();
         return View(staves);
     }
     
