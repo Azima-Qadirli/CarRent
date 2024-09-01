@@ -1,4 +1,6 @@
-﻿﻿<!-- Carousel Start -->
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<CarRent.Views.Models.Staff>
+<!-- Carousel Start -->
 <div class="header-carousel">
     <div id="carouselId" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
         <ol class="carousel-indicators">
@@ -779,14 +781,16 @@
             </p>
         </div>
         <div class="row g-4">
+        @foreach (var staff in Model)
+        {
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item p-4 pt-0">
                     <div class="team-img">
-                        <img src="img/team-1.jpg" class="img-fluid rounded w-100" alt="Image">
+                        <img src="~/images/staves/@staff.FileName" class="img-fluid rounded w-100" alt="Image">
                     </div>
                     <div class="team-content pt-4">
-                        <h4>MARTIN DOE</h4>
-                        <p>Profession</p>
+                        <h4>@staff.FirstName @staff.LastName</h4>
+                        <p>@staff.Profession</p>
                         <div class="team-icon d-flex justify-content-center">
                             <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -796,57 +800,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item p-4 pt-0">
-                    <div class="team-img">
-                        <img src="img/team-2.jpg" class="img-fluid rounded w-100" alt="Image">
-                    </div>
-                    <div class="team-content pt-4">
-                        <h4>MARTIN DOE</h4>
-                        <p>Profession</p>
-                        <div class="team-icon d-flex justify-content-center">
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item p-4 pt-0">
-                    <div class="team-img">
-                        <img src="img/team-3.jpg" class="img-fluid rounded w-100" alt="Image">
-                    </div>
-                    <div class="team-content pt-4">
-                        <h4>MARTIN DOE</h4>
-                        <p>Profession</p>
-                        <div class="team-icon d-flex justify-content-center">
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="team-item p-4 pt-0">
-                    <div class="team-img">
-                        <img src="img/team-4.jpg" class="img-fluid rounded w-100" alt="Image">
-                    </div>
-                    <div class="team-content pt-4">
-                        <h4>MARTIN DOE</h4>
-                        <p>Profession</p>
-                        <div class="team-icon d-flex justify-content-center">
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        }
         </div>
     </div>
 </div>

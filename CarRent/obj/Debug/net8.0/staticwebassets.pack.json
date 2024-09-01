@@ -453,6 +453,22 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\staves\\48fde405-d827-4713-93a5-7cac8c3b3d63F-SFO-CLS63-04_7230.webp",
+      "PackagePath": "staticwebassets\\images\\staves\\48fde405-d827-4713-93a5-7cac8c3b3d63F-SFO-CLS63-04_7230.webp"
+    },
+    {
+      "Id": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\staves\\a384518e-7aba-448f-a771-16bbd77e1452babos.jpg",
+      "PackagePath": "staticwebassets\\images\\staves\\a384518e-7aba-448f-a771-16bbd77e1452babos.jpg"
+    },
+    {
+      "Id": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\staves\\abe619ee-28b2-4a42-8b43-a2a5b6139735adem.jpeg",
+      "PackagePath": "staticwebassets\\images\\staves\\abe619ee-28b2-4a42-8b43-a2a5b6139735adem.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\staves\\c4154f59-92ed-472a-96ee-563f6ef75ff8elgiz.webp",
+      "PackagePath": "staticwebassets\\images\\staves\\c4154f59-92ed-472a-96ee-563f6ef75ff8elgiz.webp"
+    },
+    {
       "Id": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\img\\Thumbs.db",
       "PackagePath": "staticwebassets\\img\\Thumbs.db"
     },

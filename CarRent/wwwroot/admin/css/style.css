@@ -287,3 +287,15 @@
     background: var(--dark);
     border-color: var(--primary);
 }
+table img{
+    transition: 2s;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+table tr{
+    text-align: center;
+}
+table img:hover{
+    transform:scale(4);
+}

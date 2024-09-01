@@ -11,4 +11,5 @@ public class CarRentDbContext:DbContext
     }
 
     public DbSet<Service>Services { get; set; }
+    public DbSet<Staff>Staves { get; set; }
 }
