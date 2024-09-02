@@ -9,6 +9,7 @@
     <ItemGroup>
       <Folder Include="Areas\Admin\Views\Staff\" />
       <Folder Include="wwwroot\admin\" />
+      <Folder Include="wwwroot\images\carousels\" />
       <Folder Include="wwwroot\images\staves\" />
     </ItemGroup>
 

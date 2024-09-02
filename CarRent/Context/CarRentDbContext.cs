@@ -16,4 +16,5 @@ public class CarRentDbContext:DbContext
     public DbSet<Tag> Tags { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<BlogTag> BlogTags { get; set; }
+    public DbSet<Carousel>Carousels { get; set; }
 }

@@ -1,0 +1,36 @@
+@model List<CarRent.Views.Models.Carousel>
+<div class="container-fluid p-3">
+    <table class="table fs-5">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Description</th>
+            <th scope="col">Title</th>
+            <th scope="col">Image</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var carousel in Model)
+        {
+            <tr>
+                <th scope="row">@carousel.Title</th>
+                <td>@carousel.Description</td>
+                <td><img src="~/images/carousels/@carousel.FileName" alt="Carousel image"/></td>
+                <td>
+                    <a asp-action="update" asp-controller="Carousel" asp-route-id="@carousel.Id">
+                        <i class="fas fa-pen-to-square"></i>
+                    </a>
+                </td>
+                <td>
+                    <a onclick="if(!confirm('Are you sure?')){ return false; }" asp-action="remove" asp-controller="Carousel" asp-route-id="@carousel.Id">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <a class="btn btn-primary w-100" asp-controller="Carousel" asp-action="add">Add Carousel</a>
+</div>

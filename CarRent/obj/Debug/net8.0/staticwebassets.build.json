@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tGlBJ+QZKduXiF+7Zi9e3KWB5a4sYgTL+gBmz80Xvfw=",
+  "Hash": "EVA1N6OZU8ztR5uxqmCmj35UDgAxJc2U5Gkiz731DGw=",
   "Source": "CarRent",
   "BasePath": "_content/CarRent",
   "Mode": "Default",
@@ -2181,6 +2181,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\carousels\\7eb376d4-fc90-48f5-9fbd-1a8c4f87af43mercedes-benz-amg-clk-class-cls-63-wallpaper-preview.jpg",
+      "SourceId": "CarRent",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\",
+      "BasePath": "_content/CarRent",
+      "RelativePath": "images/carousels/7eb376d4-fc90-48f5-9fbd-1a8c4f87af43mercedes-benz-amg-clk-class-cls-63-wallpaper-preview.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\carousels\\7eb376d4-fc90-48f5-9fbd-1a8c4f87af43mercedes-benz-amg-clk-class-cls-63-wallpaper-preview.jpg"
     },
     {
       "Identity": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\staves\\48fde405-d827-4713-93a5-7cac8c3b3d63F-SFO-CLS63-04_7230.webp",
