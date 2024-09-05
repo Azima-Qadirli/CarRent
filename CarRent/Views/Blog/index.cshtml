@@ -1,3 +1,4 @@
+@model ICollection<CarRent.Views.Models.Blog>
 <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
@@ -20,60 +21,31 @@
                     </p>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <a asp-action="detail" asp-controller="blog" asp-route-id="4">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/blog-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <div class="blog-date">30 Dec 2025</div>
-                                <div class="blog-comment my-3">
-                                    <div class="small"><span class="fa fa-user text-primary"></span><span class="ms-2">Martin.C</span></div>
-                                    <div class="small"><span class="fa fa-comment-alt text-primary"></span><span class="ms-2">6 Comments</span></div>
+                    @foreach (var blog in Model)
+                    {
+                        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <a asp-action="detail" asp-controller="blog" asp-route-id="@blog.Id">
+                                <div class="blog-item">
+                                    <div class="blog-img">
+                                        <img src="~/images/blogs/@blog.FileName" class="img-fluid rounded-top w-100" style="width: 360px; height:220px;" alt="Image">
+                                    </div>
+                                    <div class="blog-content rounded-bottom p-4" style="min-height: 250px">
+                                        <div class="blog-date">@blog.CreateAt.ToShortDateString()</div>
+                                        <div class="blog-comment my-3">
+                                            <div class="small"><span class="fa fa-user text-primary"></span><span class="ms-2">@blog.AuthorName</span></div>
+                                            <div class="small"><span class="fa fa-comment-alt text-primary"></span><span class="ms-2">6 Comments</span></div>
+                                        </div>
+                                        <a asp-action="detail" asp-controller="blog" asp-route-id="@blog.Id" class="h4 d-block mb-3">@blog.Title1</a>
+                                        <p class="mb-3">(@blog.Description1.Substring(0,75)...</p>
+                                        <a asp-action="detail" asp-controller="blog" asp-route-id="@blog.Id" class="">Read More <i class="fa fa-arrow-right"></i></a>
+                                    </div>
+
                                 </div>
-                                <a href="#" class="h4 d-block mb-3">Rental Cars how to check driving fines?</a>
-                                <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
-                                <a href="#" class="">Read More <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        
+                            </a>
                         </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/blog-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <div class="blog-date">25 Dec 2025</div>
-                                <div class="blog-comment my-3">
-                                    <div class="small"><span class="fa fa-user text-primary"></span><span class="ms-2">Martin.C</span></div>
-                                    <div class="small"><span class="fa fa-comment-alt text-primary"></span><span class="ms-2">6 Comments</span></div>
-                                </div>
-                                <a href="#" class="h4 d-block mb-3">Rental cost of sport and other cars</a>
-                                <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
-                                <a href="#" class="">Read More  <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/blog-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            </div>
-                            <div class="blog-content rounded-bottom p-4">
-                                <div class="blog-date">27 Dec 2025</div>
-                                <div class="blog-comment my-3">
-                                    <div class="small"><span class="fa fa-user text-primary"></span><span class="ms-2">Martin.C</span></div>
-                                    <div class="small"><span class="fa fa-comment-alt text-primary"></span><span class="ms-2">6 Comments</span></div>
-                                </div>
-                                <a href="#" class="h4 d-block mb-3">Document required for car rental</a>
-                                <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
-                                <a href="#" class="">Read More  <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    }
+                   
+                    
                 </div>
             </div>
         </div>

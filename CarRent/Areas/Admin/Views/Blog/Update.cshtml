@@ -1,0 +1,29 @@
+@model CarRent.Views.Models.Staff
+<div class="container-fluid p-3 fs-5">
+    <div class="row">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="FirstName" class="form-label">FirstName</label>
+                <input type="text" class="form-control border-danger" asp-for="FirstName">
+                <span class="text-danger fs-6" asp-validation-for="FirstName"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="LastName" class="form-label">LastName</label>
+                <input type="text" class="form-control border-danger" asp-for="LastName">
+                <span class="text-danger fs-6" asp-validation-for="LastName"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Profession" class="form-label">Profession</label>
+                <input type="text" class="form-control border-danger" asp-for="Profession">
+                <span class="text-danger fs-6" asp-validation-for="Profession"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="File" class="form-label">Image</label>
+                <input type="file" class="form-control border-danger" asp-for="File">
+                <span class="text-danger fs-6" asp-validation-for="File"></span>
+            </div>
+
+            <button class="btn btn-primary w-100 mt-3" type="submit">Update Staff </button>
+        </form>
+    </div>
+</div>

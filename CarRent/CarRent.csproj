@@ -7,8 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Areas\Admin\Views\Category\" />
       <Folder Include="Areas\Admin\Views\Staff\" />
+      <Folder Include="Areas\Admin\Views\Tag\" />
       <Folder Include="wwwroot\admin\" />
+      <Folder Include="wwwroot\images\blogs\" />
       <Folder Include="wwwroot\images\carousels\" />
       <Folder Include="wwwroot\images\staves\" />
     </ItemGroup>
@@ -18,6 +21,9 @@
       <_ContentIncludedByDefault Remove="Views\Feature\index.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Team\index.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Testimontal\index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Blog\Add.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Blog\index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Blog\Update.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
@@ -28,6 +34,12 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Views\Blog\Add.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Blog\index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Blog\Update.cshtml" />
     </ItemGroup>
 
 </Project>

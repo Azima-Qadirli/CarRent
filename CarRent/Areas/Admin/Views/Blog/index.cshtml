@@ -1,0 +1,41 @@
+@model List<CarRent.Views.Models.Blog>
+<div class="container-fluid p-3">
+    <table class="table fs-5">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title 1</th>
+            <th scope="col">Title 2</th>
+            <th scope="col">Author Name</th>
+            <th scope="col">Category </th>
+            <th scope="col">Image</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var blog in Model)
+        {
+        <tr>
+            <th scope="row">@blog.Id</th>
+            <td>@(blog.Title1.Length>10 ? blog.Title1.Substring(0,10)+"..." : blog.Title1)</td>
+            <td>@(blog.Title2.Length>10 ? blog.Title2.Substring(0,10)+"..." : blog.Title2)</td>
+            <td>@blog.Author.Name</td>
+            <td>@blog.Category.Name</td>
+            <td><img src="~/images/blogs/@blog.FileName" alt="blog image"/></td>
+            <td>
+                <a asp-action="update" asp-controller="blog" asp-route-id="@blog.Id">
+                    <i class="fas fa-pen-to-square"></i>
+                </a>
+            </td>
+            <td>
+                <a onclick="if(!confirm('Are you sure?')){ return false; }" asp-action="remove" asp-controller="blog" asp-route-id="@blog.Id">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        }
+        </tbody>
+    </table>
+    <a class="btn btn-primary w-100" asp-controller="blog" asp-action="add">Add blog</a>
+</div>

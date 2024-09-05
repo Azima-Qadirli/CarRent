@@ -453,6 +453,18 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\blogs\\43fa1986-b07d-457e-a024-f28ade3215d8mercedes-benz-amg-clk-class-cls-63-wallpaper-preview.jpg",
+      "PackagePath": "staticwebassets\\images\\blogs\\43fa1986-b07d-457e-a024-f28ade3215d8mercedes-benz-amg-clk-class-cls-63-wallpaper-preview.jpg"
+    },
+    {
+      "Id": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\blogs\\e0120405-6cb8-4dca-a3de-4887cafc0b022024-AMG-CLE-COUPE-CH-DR.webp",
+      "PackagePath": "staticwebassets\\images\\blogs\\e0120405-6cb8-4dca-a3de-4887cafc0b022024-AMG-CLE-COUPE-CH-DR.webp"
+    },
+    {
+      "Id": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\carousels\\07601fc6-28a3-479d-9dbc-85388aa623b52024-AMG-CLE-COUPE-CH-DR.webp",
+      "PackagePath": "staticwebassets\\images\\carousels\\07601fc6-28a3-479d-9dbc-85388aa623b52024-AMG-CLE-COUPE-CH-DR.webp"
+    },
+    {
       "Id": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\CarRent\\CarRent\\wwwroot\\images\\carousels\\7eb376d4-fc90-48f5-9fbd-1a8c4f87af43mercedes-benz-amg-clk-class-cls-63-wallpaper-preview.jpg",
       "PackagePath": "staticwebassets\\images\\carousels\\7eb376d4-fc90-48f5-9fbd-1a8c4f87af43mercedes-benz-amg-clk-class-cls-63-wallpaper-preview.jpg"
     },

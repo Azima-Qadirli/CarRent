@@ -26,6 +26,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Blog/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Blog/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Blog/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Carousel/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2Fyb3VzZWxcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +54,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Carousel/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2Fyb3VzZWxcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Category/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Category/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Category/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Home/index.cshtml]
@@ -68,6 +98,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Staff/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhZmZcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Tag/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Tag/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/Tag/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/test/OneDrive/Desktop/c\# Jet/CarRent/CarRent/Areas/Admin/Views/_ViewImports.cshtml]

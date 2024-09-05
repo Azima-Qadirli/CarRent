@@ -4,8 +4,8 @@
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Description</th>
             <th scope="col">Title</th>
+            <th scope="col">Description</th>
             <th scope="col">Image</th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -15,6 +15,7 @@
         @foreach (var carousel in Model)
         {
             <tr>
+                <th scope="row">@carousel.Id</th>
                 <th scope="row">@carousel.Title</th>
                 <td>@carousel.Description</td>
                 <td><img src="~/images/carousels/@carousel.FileName" alt="Carousel image"/></td>

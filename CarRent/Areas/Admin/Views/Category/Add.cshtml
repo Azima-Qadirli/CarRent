@@ -1,0 +1,13 @@
+@model CarRent.Views.Models.Category
+<div class="container-fluid p-3 fs-5">
+    <div class="row">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control border-danger" asp-for="Name">
+                <span class="text-danger fs-6" asp-validation-for="Name"></span>
+                </div>
+            <button class="btn btn-primary w-100 mt-3" type="submit">Add Category</button>
+        </form>
+    </div>
+</div>

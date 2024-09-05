@@ -1,0 +1,33 @@
+@model List<CarRent.Views.Models.Category>
+<div class="container-fluid p-3">
+    <table class="table fs-5">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var category in Model)
+        {
+        <tr>
+            <th scope="row">@category.Id</th>
+            <td>@category.Name</td>
+            <td>
+                <a asp-action="update" asp-controller="category" asp-route-id="@category.Id">
+                    <i class="fas fa-pen-to-square"></i>
+                </a>
+            </td>
+            <td>
+                <a onclick="if(!confirm('Are you sure?')){ return false; }" asp-action="remove" asp-controller="category" asp-route-id="@category.Id">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        }
+        </tbody>
+    </table>
+    <a class="btn btn-primary w-100" asp-controller="category" asp-action="Add">Add category</a>
+</div>
