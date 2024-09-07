@@ -1,4 +1,3 @@
-@using CarRent.Views.Models
 @model CarRent.Views.Models.Blog
 <div class="container-fluid p-3 fs-5">
     <div class="row">
@@ -23,14 +22,24 @@
                 <textarea type="text" class="form-control border-danger" asp-for="Description2"></textarea>
                 <span class="text-danger fs-6" asp-validation-for="Description2"></span>
             </div>
-           
             <div class="mb-3">
-                <label asp-for="AuthorId" class="form-label">Category</label>
-                <select  class="form-select border-danger" asp-for="AuthorId" aria-label="Default select example">
-                    <option disabled selected>Open this select menu</option>
+                <label asp-for="AuthorId" class="form-label">Author</label>
+                <select class="form-select border-danger" asp-for="AuthorId" aria-label="Default select example">
+                    <option disabled selected>Select Author</option>
                     @foreach (Author author in ViewBag.Authors)
                     {
-                        <option value="@author.Id">@author.Name</option>
+                    <option value="@author.Id">@author.Name</option>
+                    }
+                </select>
+                <span class="text-danger fs-6" asp-validation-for="CategoryId"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="form-label">Category</label>
+                <select  class="form-select border-danger" asp-for="CategoryId" aria-label="Default select example">
+                    <option disabled selected>Select Category</option>
+                    @foreach (Category category in ViewBag.Categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
                     }
                 </select>
                 <span class="text-danger fs-6" asp-validation-for="CategoryId"></span>
@@ -56,7 +65,7 @@
                 <input type="file" class="form-control border-danger" asp-for="File">
                 <span class="text-danger fs-6" asp-validation-for="File"></span>
             </div>
-            <button class="btn btn-primary w-100 mt-3" type="submit">Add Staff </button>
+            <button class="btn btn-primary w-100 mt-3" type="submit">Add Blog </button>
         </form>
     </div>
 </div>

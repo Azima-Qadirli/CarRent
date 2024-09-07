@@ -1808,6 +1808,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\style.css))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\authors\0d0afdef-9c8a-425e-b92f-78a68b0921082024-AMG-CLE-COUPE-CH-DR.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>CarRent</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CarRent</BasePath>
+      <RelativePath>images/authors/0d0afdef-9c8a-425e-b92f-78a68b0921082024-AMG-CLE-COUPE-CH-DR.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\authors\0d0afdef-9c8a-425e-b92f-78a68b0921082024-AMG-CLE-COUPE-CH-DR.webp))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\blogs\43fa1986-b07d-457e-a024-f28ade3215d8mercedes-benz-amg-clk-class-cls-63-wallpaper-preview.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>CarRent</SourceId>
@@ -1823,6 +1839,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\blogs\43fa1986-b07d-457e-a024-f28ade3215d8mercedes-benz-amg-clk-class-cls-63-wallpaper-preview.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\blogs\532c93f8-3f61-40c6-bb70-dc676cca0b4a2024-AMG-CLE-COUPE-CH-DR.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>CarRent</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CarRent</BasePath>
+      <RelativePath>images/blogs/532c93f8-3f61-40c6-bb70-dc676cca0b4a2024-AMG-CLE-COUPE-CH-DR.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\blogs\532c93f8-3f61-40c6-bb70-dc676cca0b4a2024-AMG-CLE-COUPE-CH-DR.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\blogs\e0120405-6cb8-4dca-a3de-4887cafc0b022024-AMG-CLE-COUPE-CH-DR.webp))">
       <SourceType>Package</SourceType>

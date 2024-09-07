@@ -1,0 +1,24 @@
+@model CarRent.Views.Models.Author
+<div class="container-fluid p-3 fs-5">
+    <div class="row">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control border-danger" asp-for="Name">
+                <span class="text-danger fs-6" asp-validation-for="Name"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Description</label>
+                <textarea class="form-control border-danger" asp-for="Description" rows="3"></textarea>
+                <span class="text-danger fs-6" asp-validation-for="Description"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="File" class="form-label">Image</label>
+                <input type="file" class="form-control border-danger" asp-for="File">
+                <span class="text-danger fs-6" asp-validation-for="File"></span>
+            </div>
+
+            <button class="btn btn-primary w-100 mt-3" type="submit">Add Author </button>
+        </form>
+    </div>
+</div>

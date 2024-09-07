@@ -1,29 +1,88 @@
-@model CarRent.Views.Models.Staff
+@model Blog
 <div class="container-fluid p-3 fs-5">
     <div class="row">
         <form method="post" enctype="multipart/form-data">
             <div class="mb-3">
-                <label asp-for="FirstName" class="form-label">FirstName</label>
-                <input type="text" class="form-control border-danger" asp-for="FirstName">
-                <span class="text-danger fs-6" asp-validation-for="FirstName"></span>
+                <label asp-for="Title1" class="form-label">Title 1</label>
+                <input type="text" class="form-control border-danger" asp-for="Title1">
+                <span class="text-danger fs-6" asp-validation-for="Title1"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="LastName" class="form-label">LastName</label>
-                <input type="text" class="form-control border-danger" asp-for="LastName">
-                <span class="text-danger fs-6" asp-validation-for="LastName"></span>
+                <label asp-for="Description1" class="form-label">Description 1</label>
+                <textarea type="text" class="form-control border-danger" asp-for="Description1"></textarea>
+                <span class="text-danger fs-6" asp-validation-for="Description1"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="Profession" class="form-label">Profession</label>
-                <input type="text" class="form-control border-danger" asp-for="Profession">
-                <span class="text-danger fs-6" asp-validation-for="Profession"></span>
+                <label asp-for="Title2" class="form-label">Title 2</label>
+                <input type="text" class="form-control border-danger" asp-for="Title2">
+                <span class="text-danger fs-6" asp-validation-for="Title2"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description2" class="form-label">Description 2</label>
+                <textarea type="text" class="form-control border-danger" asp-for="Description2"></textarea>
+                <span class="text-danger fs-6" asp-validation-for="Description2"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="AuthorId" class="form-label">Author</label>
+                <select class="form-select border-danger" asp-for="AuthorId" aria-label="Default select example">
+                    <option disabled selected>Select Author</option>
+                    @foreach (Author author in ViewBag.Authors)
+                    {
+                    <option value="@author.Id">@author.Name</option>
+                    }
+                </select>
+                <span class="text-danger fs-6" asp-validation-for="CategoryId"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="form-label">Category</label>
+                <select class="form-select border-danger" asp-for="CategoryId" aria-label="Default select example">
+                    <option disabled selected>Select Category</option>
+                    @foreach (Category category in ViewBag.Categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                </select>
+                <span class="text-danger fs-6" asp-validation-for="CategoryId"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="TagIDs" class="form-label">Tags</label>
+                <select multiple class="form-select border-danger" asp-for="TagIDs" aria-label="Default select example">
+                    <option disabled selected>Select Tags</option>
+                    @foreach (Tag tag in ViewBag.Tags)
+                    {
+                        if (tag.BlogTags.Count > 0)
+                        {
+                            @foreach (BlogTag blogTag in tag.BlogTags)
+                            {
+                                if (blogTag.BlogId == Model.Id)
+                                {
+                                    <option selected value="@tag.Id">@tag.Name</option>
+                                }
+                                else
+                                {
+                                    <option value="@tag.Id">@tag.Name</option>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <option value="@tag.Id">@tag.Name</option>
+                        }
+                    }
+                </select>
+                <span class="text-danger fs-6" asp-validation-for="TagIDs"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Paragraph" class="form-label">Paragraph</label>
+                <textarea type="text" class="form-control border-danger" asp-for="Paragraph"></textarea>
+                <span class="text-danger fs-6" asp-validation-for="Paragraph"></span>
             </div>
             <div class="mb-3">
                 <label asp-for="File" class="form-label">Image</label>
                 <input type="file" class="form-control border-danger" asp-for="File">
                 <span class="text-danger fs-6" asp-validation-for="File"></span>
             </div>
-
-            <button class="btn btn-primary w-100 mt-3" type="submit">Update Staff </button>
+            <button class="btn btn-primary w-100 mt-3" type="submit">Update Blog</button>
         </form>
     </div>
 </div>

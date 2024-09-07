@@ -1,0 +1,37 @@
+@model List<CarRent.Views.Models.Author>
+<div class="container-fluid p-3">
+    <table class="table fs-5">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <th scope="row">@author.Id</th>
+                <th scope="row">@author.Name</th>
+                <td>@author.Description</td>
+                <td><img src="~/images/authors/@author.FileName" alt="Author image"/></td>
+                <td>
+                    <a asp-action="update" asp-controller="Author" asp-route-id="@author.Id">
+                        <i class="fas fa-pen-to-square"></i>
+                    </a>
+                </td>
+                <td>
+                    <a onclick="if(!confirm('Are you sure?')){ return false; }" asp-action="remove" asp-controller="Author" asp-route-id="@author.Id">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <a class="btn btn-primary w-100" asp-controller="Author" asp-action="add">Add Author</a>
+</div>

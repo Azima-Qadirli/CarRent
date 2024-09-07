@@ -11,6 +11,7 @@
       <Folder Include="Areas\Admin\Views\Staff\" />
       <Folder Include="Areas\Admin\Views\Tag\" />
       <Folder Include="wwwroot\admin\" />
+      <Folder Include="wwwroot\images\authors\" />
       <Folder Include="wwwroot\images\blogs\" />
       <Folder Include="wwwroot\images\carousels\" />
       <Folder Include="wwwroot\images\staves\" />
@@ -37,6 +38,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Views\Author\Add.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Author\index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Author\Update.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Blog\Add.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Blog\index.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Blog\Update.cshtml" />

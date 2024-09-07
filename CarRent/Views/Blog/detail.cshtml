@@ -13,7 +13,6 @@
     </div>
 </div>
 <!-- Header End -->
-
 <section class="ftco-section ftco-degree-bg">
     <div class="container">
         <div class="row">
@@ -37,18 +36,15 @@
                         }
                     </div>
                 </div>
-
                 <div class="about-author d-flex p-4 bg-light">
                     <div class="bio mr-5">
-                        <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
+                        <img src="~/images/authors/@Model.Author?.FileName" alt="Image placeholder" style="width: 90px !important; height: 90px !important; border-radius: 50%; margin-right: 10px" class="img-fluid mb-4">
                     </div>
                     <div class="desc">
-                        <h3>George Washington</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                        <h3>@Model.Author?.Name</h3>
+                        <p>@Model.Author?.Description</p>
                     </div>
                 </div>
-
-
                 <div class="pt-5 mt-5">
                     <h3 class="mb-5">6 Comments</h3>
                     <ul class="comment-list">
@@ -200,7 +196,7 @@
                                 <h3 class="heading"><a href="#">@blog.Title1</a></h3>
                                 <div class="meta">
                                     <div><a href="#"><span class="icon-calendar"></span>@blog.CreateAt.ToShortDateString()</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> @blog.AuthorName </a></div>
+                                    <div><a href="#"><span class="icon-person"></span> @blog.Author.Name </a></div>
                                     <div><a href="#"><span class="icon-chat"></span> 19</a></div>
                                 </div>
                             </div>

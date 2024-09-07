@@ -32,7 +32,7 @@
                                     <div class="blog-content rounded-bottom p-4" style="min-height: 250px">
                                         <div class="blog-date">@blog.CreateAt.ToShortDateString()</div>
                                         <div class="blog-comment my-3">
-                                            <div class="small"><span class="fa fa-user text-primary"></span><span class="ms-2">@blog.AuthorName</span></div>
+                                            <div class="small"><span class="fa fa-user text-primary"></span><span class="ms-2">@blog.Author.Name</span></div>
                                             <div class="small"><span class="fa fa-comment-alt text-primary"></span><span class="ms-2">6 Comments</span></div>
                                         </div>
                                         <a asp-action="detail" asp-controller="blog" asp-route-id="@blog.Id" class="h4 d-block mb-3">@blog.Title1</a>
