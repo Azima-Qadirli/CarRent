@@ -1,6 +1,8 @@
 using CarRent.Context;
 using CarRent.Repositories;
 using CarRent.Repositories.Interfaces;
+using CarRent.Views.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,10 +18,26 @@ builder.Services.AddDbContext<CarRentDbContext>(opt =>
 
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 
+builder.Services.AddIdentity<AppUser,IdentityRole>(options =>
+    {
+       options.Password.RequireDigit = true;
+       options.Password.RequireLowercase = true;
+       options.Password.RequireNonAlphanumeric = true;
+       options.Password.RequireUppercase = true;
+       options.Password.RequiredLength = 8;
+       options.User.RequireUniqueEmail = true;
+       options.Lockout.MaxFailedAccessAttempts = 5;
+       options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    })
+    .AddEntityFrameworkStores<CarRentDbContext>()
+    .AddDefaultTokenProviders();
 
 
 
 var app = builder.Build();
+
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -51,8 +69,6 @@ app.UseEndpoints(endpoint =>
 
 
 
-// app.MapControllerRoute(
-//     name: "default",
-//     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();

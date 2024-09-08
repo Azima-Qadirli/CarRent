@@ -1,9 +1,10 @@
 using CarRent.Views.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarRent.Context;
 
-public class CarRentDbContext:DbContext
+public class CarRentDbContext:IdentityDbContext<AppUser>
 {
     public CarRentDbContext(DbContextOptions<CarRentDbContext>options):base(options)
     {
