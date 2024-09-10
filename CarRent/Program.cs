@@ -1,6 +1,8 @@
+using System.Text.Json.Serialization;
 using CarRent.Context;
 using CarRent.Repositories;
 using CarRent.Repositories.Interfaces;
+using CarRent.Services;
 using CarRent.Views.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +10,9 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddJsonOptions(x =>
+    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+
 
 builder.Services.AddDbContext<CarRentDbContext>(opt =>
 {
@@ -17,6 +21,9 @@ builder.Services.AddDbContext<CarRentDbContext>(opt =>
 
 
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
+builder.Services.AddScoped<IMailService, MailService>();
+
+
 
 builder.Services.AddIdentity<AppUser,IdentityRole>(options =>
     {
@@ -28,6 +35,7 @@ builder.Services.AddIdentity<AppUser,IdentityRole>(options =>
        options.User.RequireUniqueEmail = true;
        options.Lockout.MaxFailedAccessAttempts = 5;
        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+       options.SignIn.RequireConfirmedEmail = true;
     })
     .AddEntityFrameworkStores<CarRentDbContext>()
     .AddDefaultTokenProviders();
@@ -57,7 +65,7 @@ app.UseEndpoints(endpoint =>
 {
     endpoint.MapAreaControllerRoute(
         name: "admin",
-        pattern: "admin/{controller=Home}/{action=Index}/{id?}",
+        pattern: "admin/{controller=Account}/{action=Login}/{id?}",
         areaName: "admin"
     );
 

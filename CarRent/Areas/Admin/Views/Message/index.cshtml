@@ -1,0 +1,106 @@
+@model List<CarRent.Views.Models.Message>
+<div class="container-fluid p-3">
+    <table class="table fs-5">
+        <thead>
+        <tr>
+            <th scope="col">User</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Subject</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var message in Model)
+        {
+            <tr>
+                <th scope="row" hidden>@message.Id</th>
+                <td>@message.AppUser.FirstName @message.AppUser.LastName</td>
+                <td>@message.Phone</td>
+                <td><i class="fas @message.Subject"></i></td>
+                <td>
+                    <i class="fas fa-eye" style="cursor: pointer"></i>
+                </td>
+                <td>
+                    <a onclick="if(!confirm('Are you sure?')){ return false; }" asp-action="remove" asp-controller="message" asp-route-id="@message.Id">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <!-- Modal -->
+    <div class="modal fade" id="messageDetailModal" tabindex="-1" aria-labelledby="messageDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-secondary">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="messageDetailModalLabel">Message Details</h1>
+                    <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12 m-2 ">
+                        <div class="form-floating">
+                            <input type="text" disabled class="form-control bg-white" id="userDetail" placeholder="Phone">
+                            <label for="phone">User Detail</label>
+                        </div>
+                    </div>
+                    <div class="col-12 m-2">
+                        <div class="form-floating">
+                            <input type="text" disabled class="form-control bg-white" id="phone" placeholder="Phone">
+                            <label for="phone">Phone</label>
+                        </div>
+                    </div>
+                    <div class="col-12 m-2">
+                        <div class="form-floating">
+                            <input type="text" disabled class="form-control bg-white" id="subject" placeholder="Subject">
+                            <label for="subject">Subject</label>
+                        </div>
+                    </div>
+                    <div class="col-12 m-2">
+                        <div class="form-floating">
+                            <textarea class="form-control bg-white" disabled placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var eyes = document.querySelectorAll(".fa-eye")?.forEach(eye =>{
+      eye.addEventListener("click",(e)=>{
+        e.preventDefault();
+          var id = eye.parentElement.parentElement.firstElementChild.textContent;
+          const url = `/admin/message/details/${id}`
+
+          fetch(url, {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+          })
+              .then(response => {
+                  return response.json();
+              })
+              .then(data =>{
+                if (data){
+                document.querySelector("#userDetail").value = data.appUser.firstName +" " + data.appUser.lastName;
+                document.querySelector("#phone").value = data.phone;
+                document.querySelector("#subject").value = data.subject;
+                document.querySelector("#message").value = data.body;
+                    var myModal = new bootstrap.Modal(document.getElementById('messageDetailModal'));
+                    myModal.show();
+                }
+              });
+        
+      })
+    });
+    
+    
+</script>

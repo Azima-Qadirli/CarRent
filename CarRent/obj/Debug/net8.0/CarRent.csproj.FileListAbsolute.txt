@@ -8,6 +8,7 @@ C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\appsettings.json
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\CarRent.staticwebassets.runtime.json
@@ -17,6 +18,8 @@ C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\CarRent.r
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Humanizer.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Build.dll
@@ -36,6 +39,9 @@ C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -251,9 +257,3 @@ C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\obj\Debug\net8.0\CarRent.p
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\obj\Debug\net8.0\CarRent.genruntimeconfig.cache
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\CarRent.pdb
 C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\obj\Debug\net8.0\ref\CarRent.dll
-C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\test\OneDrive\Desktop\c# Jet\CarRent\CarRent\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

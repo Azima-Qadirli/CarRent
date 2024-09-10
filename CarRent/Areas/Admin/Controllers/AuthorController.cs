@@ -1,11 +1,12 @@
 using CarRent.Repositories.Interfaces;
 using CarRent.Views.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarRent.Controllers;
 [Area("Admin")]
-
+[Authorize(Roles = "SuperAdmin,Admin")]
 public class AuthorController : Controller
 {
     private readonly IRepository<Author> _repository;

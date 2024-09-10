@@ -1,12 +1,14 @@
 //using CarRent.Models;
 using CarRent.Repositories.Interfaces;
 using CarRent.Views.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarRent.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "SuperAdmin,Admin")]
 public class CategoryController : Controller
 {
     private readonly IRepository<Category> _repository;

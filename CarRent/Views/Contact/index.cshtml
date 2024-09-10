@@ -70,30 +70,12 @@
                     <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="bg-secondary p-5 rounded">
                             <h4 class="text-primary mb-4">Send Your Message</h4>
-                            <form>
+                            <form id="messageForm">
                                 <div class="row g-4">
-                                    <div class="col-lg-12 col-xl-6">
+                                    <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                            <label for="name">Your Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                            <label for="email">Your Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="phone" class="form-control" id="phone" placeholder="Phone">
+                                            <input type="text" class="form-control" id="phone" placeholder="Phone">
                                             <label for="phone">Your Phone</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="project" placeholder="Project">
-                                            <label for="project">Your Project</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -157,9 +139,7 @@
                     </div>
                     <div class="col-12">
                         <div class="rounded">
-                            <iframe class="rounded w-100" 
-                            style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd" 
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.7294807585695!2d49.859740888968695!3d40.37651948617987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d71b8e4c5b9%3A0xfe50781c5645b252!2sPort%20Baku%20Mall!5e0!3m2!1saz!2saz!4v1725966847169!5m2!1saz!2saz"  height="450" style="border:0; width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
 
@@ -167,3 +147,50 @@
             </div>
         </div>
         <!-- Contact End -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
+
+<script>
+            document.querySelector("messageForm").addEventListener("submit",(e)=>{
+            e.preventDefault();
+
+                const data = {
+                    phone:document.querySelector("#phone").value == "" ? null: document.querySelector("#phone").value,
+                    subject:document.querySelector("#subject").value == "" ? null: document.querySelector("#subject").value,
+                    body:document.querySelector("#message").value == "" ? null: document.querySelector("#message").value,
+                }
+
+                const url='/contact/sendMessage'
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then(response => {
+                        return response.json();
+                    })
+                    .then(data =>{
+                        if (data.successCode !=201){
+                            Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: data.message,
+                            });
+                        }
+                        else{
+                            Swal.fire({
+                                title: "Good job!",
+                                text: data.message,
+                                icon: "success"
+                            });
+                            document.querySelector("#phone").value = "";
+                            document.querySelector("#subject").value = "";
+                            document.querySelector("#message").value = "";
+                        }
+                    });
+            })
+            
+            
+        </script>

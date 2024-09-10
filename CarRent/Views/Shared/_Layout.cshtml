@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Cental - Car Rent Website Template</title>
+    <title>Cental Admin Panel</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -85,8 +85,17 @@
                     <a asp-action="index" asp-controller="blog"  class="nav-item nav-link">Blog</a>
                     <a asp-action="index" asp-controller="contact" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="#" class="btn btn-primary rounded-pill py-2 px-4" style="margin-right: 10px">Login</a>
-                <a asp-action="register" asp-controller="Account" class="btn btn-secondary rounded-pill py-2 px-4">Register</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a  asp-action="info" asp-controller="account"   class="btn btn-primary rounded-pill py-2 px-4" style="margin-right: 10px">@User.Identity.Name</a>
+                    <a asp-action="logout" asp-controller="account" class="btn btn-secondary rounded-pill py-2 px-4">Logout</a>
+                }
+                else
+                {
+                    <a  asp-action="login" asp-controller="account"   class="btn btn-primary rounded-pill py-2 px-4" style="margin-right: 10px">Login</a>
+                    <a asp-action="register" asp-controller="account" class="btn btn-secondary rounded-pill py-2 px-4">Register</a>
+                }
+                
             </div>
         </nav>
     </div>
@@ -169,7 +178,7 @@
                 <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                 <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                 <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                Designed By <a class="border-bottom text-white" href="https://nijatsoltanov.netlify.app/">Nijat Soltanov</a>
+                Designed By <a class="border-bottom text-white" href="https://github.com/Azima-Qadirli">Azima Qadirli</a>
             </div>
         </div>
     </div>

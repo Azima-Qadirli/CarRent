@@ -25,6 +25,7 @@
       <_ContentIncludedByDefault Remove="Areas\Admin\Views\Blog\Add.cshtml" />
       <_ContentIncludedByDefault Remove="Areas\Admin\Views\Blog\index.cshtml" />
       <_ContentIncludedByDefault Remove="Areas\Admin\Views\Blog\Update.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Message\index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
@@ -45,6 +46,7 @@
       <AdditionalFiles Include="Areas\Admin\Views\Blog\Add.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Blog\index.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Blog\Update.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Message\index.cshtml" />
     </ItemGroup>
 
 </Project>

@@ -312,73 +312,7 @@
 </div>
 <!-- Fact Counter -->
 
-<!-- Services Start -->
-<div class="container-fluid service py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <h1 class="display-5 text-capitalize mb-3">Cental <span class="text-primary">Services</span></h1>
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
-            </p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item p-4">
-                    <div class="service-icon mb-4">
-                        <i class="fa fa-phone-alt fa-2x"></i>
-                    </div>
-                    <h5 class="mb-3">Phone Reservation</h5>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item p-4">
-                    <div class="service-icon mb-4">
-                        <i class="fa fa-money-bill-alt fa-2x"></i>
-                    </div>
-                    <h5 class="mb-3">Special Rates</h5>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item p-4">
-                    <div class="service-icon mb-4">
-                        <i class="fa fa-road fa-2x"></i>
-                    </div>
-                    <h5 class="mb-3">One Way Rental</h5>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item p-4">
-                    <div class="service-icon mb-4">
-                        <i class="fa fa-umbrella fa-2x"></i>
-                    </div>
-                    <h5 class="mb-3">Life Insurance</h5>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item p-4">
-                    <div class="service-icon mb-4">
-                        <i class="fa fa-building fa-2x"></i>
-                    </div>
-                    <h5 class="mb-3">City to City</h5>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item p-4">
-                    <div class="service-icon mb-4">
-                        <i class="fa fa-car-alt fa-2x"></i>
-                    </div>
-                    <h5 class="mb-3">Free Rides</h5>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Services End -->
+@Html.Partial("_ServicePartial",model:@Model.Services)
 
 <!-- Car categories Start -->
 <div class="container-fluid categories pb-5">
@@ -689,39 +623,7 @@
 </div>
 <!-- Banner End -->
 
-<!-- Team Start -->
-<div class="container-fluid team pb-5">
-    <div class="container pb-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <h1 class="display-5 text-capitalize mb-3">Customer<span class="text-primary"> Suport</span> Center</h1>
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
-            </p>
-        </div>
-        <div class="row g-4">
-        @foreach (var staff in Model.Staves) 
-        {
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item p-4 pt-0">
-                    <div class="team-img">
-                        <img src="~/images/staves/@staff.FileName" class="img-fluid rounded w-100" alt="Image">
-                    </div>
-                    <div class="team-content pt-4">
-                        <h4>@staff.FirstName @staff.LastName</h4>
-                        <p>@staff.Profession</p>
-                        <div class="team-icon d-flex justify-content-center">
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-        </div>
-    </div>
-</div>
-<!-- Team End -->
+@Html.Partial("_TeamPartial",model:@Model.Staves)
 
 <!-- Testimonial Start -->
 <div class="container-fluid testimonial pb-5">

@@ -1,7 +1,5 @@
 @model List<CarRent.Views.Models.Service>
-@{
-    double second = 0.1;
-}
+
 <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
@@ -14,37 +12,8 @@
             </div>
         </div>
         <!-- Header End -->
-
-        <!-- Services Start -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h1 class="display-5 text-capitalize mb-3">Cental <span class="text-primary">Services</span></h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
-                    </p>
-                </div>
-                <div class="row g-4">
-                    @foreach (var service in Model)
-                    {
-                        var secondString = (second + "s").Replace(",", ".");
-                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="@secondString">
-                            <div class="service-item p-4">
-                                <div class="service-icon mb-4">
-                                    <i class="fa @service.Icon fa-2x"></i>
-                                </div>
-                                <h5 class="mb-3">@service.Title</h5>
-                                <p class="mb-0">@service.Description</p>
-                            </div>
-                        </div>
-                        if (second < 0.5)
-                            second += 0.2;
-                        else
-                            second = 0.1;
-                    }
-                </div>
-            </div>
-        </div>
-        <!-- Services End -->
+@Html.Partial("_ServicePartial",model:@Model)
+       
 
         <!-- Fact Counter -->
         <div class="container-fluid counter py-5">
