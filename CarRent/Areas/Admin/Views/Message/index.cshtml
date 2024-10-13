@@ -13,23 +13,24 @@
         <tbody>
         @foreach (var message in Model)
         {
-            <tr>
-                <th scope="row" hidden>@message.Id</th>
-                <td>@message.AppUser.FirstName @message.AppUser.LastName</td>
-                <td>@message.Phone</td>
-                <td><i class="fas @message.Subject"></i></td>
-                <td>
-                    <i class="fas fa-eye" style="cursor: pointer"></i>
-                </td>
-                <td>
-                    <a onclick="if(!confirm('Are you sure?')){ return false; }" asp-action="remove" asp-controller="message" asp-route-id="@message.Id">
-                        <i class="fas fa-trash"></i>
-                    </a>
-                </td>
-            </tr>
+        <tr>
+            <th scope="row" hidden>@message.Id</th>
+            <td>@message.AppUser.FirstName @message.AppUser.LastName</td>
+            <td>@message.Phone</td>
+            <td>@message.Subject</td>
+            <td>
+                <i class="fas fa-eye" style="cursor: pointer"></i>
+            </td>
+            <td>
+                <a onclick="if(!confirm('Are you sure?')){ return false; }" asp-action="remove" asp-controller="message" asp-route-id="@message.Id">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
         }
         </tbody>
     </table>
+
     <!-- Modal -->
     <div class="modal fade" id="messageDetailModal" tabindex="-1" aria-labelledby="messageDetailModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -72,35 +73,36 @@
         </div>
     </div>
 </div>
+
 <script>
     var eyes = document.querySelectorAll(".fa-eye")?.forEach(eye =>{
-      eye.addEventListener("click",(e)=>{
-        e.preventDefault();
-          var id = eye.parentElement.parentElement.firstElementChild.textContent;
-          const url = `/admin/message/details/${id}`
+        eye.addEventListener("click",(e)=>{
+            e.preventDefault();
+            var id = eye.parentElement.parentElement.firstElementChild.textContent;
+            const url = `/admin/message/details/${id}`
 
-          fetch(url, {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-          })
-              .then(response => {
-                  return response.json();
-              })
-              .then(data =>{
-                if (data){
-                document.querySelector("#userDetail").value = data.appUser.firstName +" " + data.appUser.lastName;
-                document.querySelector("#phone").value = data.phone;
-                document.querySelector("#subject").value = data.subject;
-                document.querySelector("#message").value = data.body;
-                    var myModal = new bootstrap.Modal(document.getElementById('messageDetailModal'));
-                    myModal.show();
-                }
-              });
-        
-      })
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+                .then(response => {
+                    return response.json();
+                })
+                .then(data =>{
+                    if (data){
+                        document.querySelector("#userDetail").value = data.appUser.firstName +" " + data.appUser.lastName;
+                        document.querySelector("#phone").value = data.phone;
+                        document.querySelector("#subject").value = data.subject;
+                        document.querySelector("#message").value = data.body;
+                        var myModal = new bootstrap.Modal(document.getElementById('messageDetailModal'));
+                        myModal.show();
+                    }
+                });
+
+        })
     });
-    
-    
+
+
 </script>

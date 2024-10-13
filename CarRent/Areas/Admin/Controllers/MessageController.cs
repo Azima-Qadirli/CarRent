@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CarRent.Areas.Admin.Controllers;
 
 [Area("Admin")]
-
+[Authorize(Roles = "Admin,SuperAdmin")]
 public class MessageController : Controller
 {
     private readonly IRepository<Message> _repository;
@@ -21,14 +21,14 @@ public class MessageController : Controller
     [Authorize(Roles = "SuperAdmin,Admin")]
     public async Task<IActionResult> Index()
     {
-        var models = await _repository.GetAll().ToListAsync();
+        var models = await _repository.GetAll().Include(x=>x.AppUser).ToListAsync();
         return View(models);
     }
 
 
     public async Task<IActionResult> Details(int id)
     {
-        var result = await _repository.GetAll().Include(x=>x.AppUser).Where(x => x.Id == id).ToListAsync();
+        var result = await _repository.GetAll().Where(x => x.Id == id).Include(x=>x.AppUser).FirstOrDefaultAsync();
         if (result is null)
         {
             return Json(new{message = "Not Found"});

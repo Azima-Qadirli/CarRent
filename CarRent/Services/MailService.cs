@@ -19,7 +19,7 @@ public class MailService: IMailService
         smtpClient.Host = "smtp.gmail.com";
         smtpClient.Port = 587;
         smtpClient.UseDefaultCredentials = false;
-        smtpClient.Credentials = new NetworkCredential(from,"password");
+        smtpClient.Credentials = new NetworkCredential(from,"yawh mwsx mjzr mryp");
         smtpClient.EnableSsl = true;
         
         smtpClient.Send(mail);

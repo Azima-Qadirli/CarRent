@@ -104,6 +104,7 @@ public class AccountController : Controller
         await _signInManager.SignOutAsync();
         return RedirectToAction("Index", "Home");
     }
+    
     public async Task<IActionResult>ConfirmEmail(string userId, string token)
     {
         var user  = await _userManager.FindByIdAsync(userId);

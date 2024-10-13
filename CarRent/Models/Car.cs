@@ -1,8 +1,9 @@
+using CarRent.Views.Models.BaseEntities;
 using CarRent.Views.Models.Enums;
 
 namespace CarRent.Views.Models;
 
-public class Car
+public class Car:BaseEntity
 {
     public double Price { get; set; }
     public int NumberOfSeats { get; set; }

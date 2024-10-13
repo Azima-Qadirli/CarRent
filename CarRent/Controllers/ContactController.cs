@@ -15,26 +15,30 @@ public class ContactController : Controller
         _repository = repository;
         _userManager = userManager;
     }
-[HttpPost]
     public IActionResult Index()
     {
         return View();
     }
-
-    public async Task<IActionResult> SendEmail([FromBody] Message message)
+    [HttpPost]
+    public async Task<IActionResult> SendMessage([FromBody] Message message)
     {
         if (!ModelState.IsValid)
         {
-            return Json(new{successCode = 400,message = "Please,check your inputs!"});
+            return Json(new { successCode = 400, message = "Please check your inputs" });
         }
-      var user = await  _userManager.FindByNameAsync(User.Identity?.Name);
-      if (user == null)
-      {
-          return Json(new{successCode = 404,message = "First,You have to login."});
-      }
-      message.AppUserId = user.Id;
+
+        try
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            message.AppUserId = user.Id;
+        }
+        catch 
+        {
+            return Json(new { successCode = 404, message = "Firstly, you have to login" });
+        }
+
         await _repository.AddAsync(message);
         await _repository.SaveAsync();
-        return Json(new{successCode = 201,message = "Your message has been sent."});
+        return Json(new { successCode = 201, message = "Your message has been sent" });
     }
 }

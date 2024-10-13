@@ -1,3 +1,4 @@
+using CarRent.Services;
 using CarRent.Views.Models;
 using CarRent.Views.Models.Account;
 using Microsoft.AspNetCore.Identity;
@@ -10,11 +11,13 @@ public class AccountController : Controller
     private readonly UserManager<AppUser> _userManager;
     private readonly SignInManager<AppUser> _signInManager;
     private readonly RoleManager<IdentityRole> _roleManager;
+    
     public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _roleManager = roleManager;
+        
     }
 
     [HttpGet]

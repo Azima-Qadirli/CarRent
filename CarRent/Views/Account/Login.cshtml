@@ -36,3 +36,27 @@
         </div>
     </div>
 </div>
+<style>
+    .divider:after,
+    .divider:before {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: gray;
+    }
+</style>
+
+<script>
+    const eye = document.querySelector('#eye')
+    const passwordInput = document.querySelector('#passwordInput')
+    eye.addEventListener('click', () => {
+        if (passwordInput.getAttribute('type') == 'password') {
+            passwordInput.setAttribute('type', 'text')
+            eye.classList.replace('fa-eye', 'fa-eye-slash')
+        }
+        else {
+            passwordInput.setAttribute('type', 'password')
+            eye.classList.replace('fa-eye-slash', 'fa-eye')
+        }
+    })
+</script>
