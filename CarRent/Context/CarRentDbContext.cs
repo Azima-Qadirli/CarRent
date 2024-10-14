@@ -22,7 +22,7 @@ public class CarRentDbContext:IdentityDbContext<AppUser>
     public DbSet<Category>Categories { get; set;}
     public DbSet<BlogTag>BlogTags { get; set; }
     public DbSet<Carousel>Carousels { get; set; }
-    public DbSet<Message>Messages { get; set; }
+    //Bpublic DbSet<Message>Messages { get; set; }
     public DbSet<Car>Cars { get; set; }
     public DbSet<Brand>Brands { get; set; }
     public DbSet<Model>Models { get; set; }

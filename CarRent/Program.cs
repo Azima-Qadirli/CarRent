@@ -16,7 +16,7 @@ builder.Services.AddControllersWithViews().AddJsonOptions(x =>
 
 builder.Services.AddDbContext<CarRentDbContext>(opt =>
 {
-    opt.UseSqlServer("Server=DESKTOP-UM6TF1M;Database=CarRent;Integrated Security = true;Encrypt=false;");
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
 
