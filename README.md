@@ -1,27 +1,36 @@
-# 🚗 Cental - MVC Project  
+# 🚗 Cental - Car Rental MVC Project  
 
-## 🌐 Project Link  
-🔗 https://cental.bsite.net/
-
----
-
-## 📜 Description  
-**Cental** is a web application designed using the **Model-View-Controller (MVC)** architectural pattern, focusing on car rentals and connecting users with rental services.  
-
-### 🌟 Key Features:  
-- 🛍️ **Rental Management**: SuperAdmins can create and manage car rental features.  
-- 📝 **Blog Management**: SuperAdmins can create blogs to engage with users.  
-- 📩 **Contact Messages**: View messages written by users through the website.  
-- ✅ **Email Verification**: For user registration and password reset functionality.  
-- 🔐 **Access Control**:  
-  - SuperAdmins have exclusive access to the Admin Panel.  
-  - Unauthorized users attempting to access the Admin Panel receive a **"You are not able to log in"** message.  
+## 🌐 Explore the Project  
+🔗 [Cental Official Website](https://cental.bsite.net/)
 
 ---
 
-## 🛠️ Technologies Used  
+## 📜 About the Project  
+**Cental** is a dynamic car rental web application built using the **Model-View-Controller (MVC)** architectural pattern. The platform connects users with car rental services, streamlining the process for both renters and administrators.  
+
+### 🚀 Key Highlights:  
+- **🔧 Comprehensive Rental Management**:  
+  SuperAdmins can oversee the addition, modification, and removal of car rental features effortlessly.  
+- **🖋️ Blog Creation**:  
+  Publish engaging blogs to share updates, tips, and car rental trends with users.  
+- **📨 User Interaction**:  
+  View and manage contact messages sent by users for inquiries or feedback.  
+- **📧 Secure Email Verification**:  
+  Enable secure user registration and password recovery via email.  
+- **🔒 Admin Panel Access Control**:  
+  - Exclusive access for SuperAdmins to the Admin Panel.  
+  - Unauthorized users are greeted with a **"You are not able to log in"** message for restricted areas.  
+
+---
+
+## 🛠️ Tech Stack  
 - **Programming Language**: C#  
-- **Framework**: ASP.NET MVC  
+- **Framework**: MVC  
 - **Frontend**: HTML, CSS, JavaScript  
 - **Database**: SQL Server  
 - **Version Control**: Git  
+
+---
+
+## 🌟 Why Choose Cental?  
+Cental provides a seamless and efficient way to manage car rentals, ensuring secure access, streamlined administration, and engaging user interaction.  
